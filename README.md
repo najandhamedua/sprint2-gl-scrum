@@ -1,1 +1,1 @@
-# sprint2-gl-scrum
+#  Sprint 2 Génie logiciel - Scrum
