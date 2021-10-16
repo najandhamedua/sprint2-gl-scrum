@@ -1,0 +1,16 @@
+Filename: ./CORPUS_TRAIN/Das_Martins.pdf
+Title: A Survey on Automatic Text Summarization
+Abstract: Ono, K., Sumita, K., and Miike, S. (1994). Abstract generation based on rhetorical
+  structure extraction. In Proceedings of Coling ’94, pages 344{348, Morristown,NJ, USA. [9]Osborne, M. (2002). Using maximum entropy for sentence extraction. In Proceedings
+  of the ACL’02 Workshop on Automatic Summarization, pages 1{8, Morristown,
+  NJ, USA. [7]Papineni, K., Roukos, S., Ward, T., and Zhu, W.-J. (2001). Bleu: a method for
+  automatic evaluation of machine translation. In Proceedings of ACL ’02, pages
+  311{318, Morristown, NJ, USA. [24]Radev, D. R., Hovy, E., and McKeown, K. (2002). Introduction to the special issue
+  on summarization. Computational Linguistics., 28(4):399{408. [1, 2]Radev, D. R., Jing, H., and Budzikowska, M. (2000). Centroid-based summarizationof multiple documents: sentence extraction, utility-based evaluation, and user
+  studies. In NAACL-ANLP 2000 Workshop on Automatic summarization, pages
+  21{30, Morristown, NJ, USA. [12, 16, 17]30,Radev, D. R., Jing, H., Stys, M., and Tam, D. (2004). Centroid-based summariza-tion of multiple documents. Information Processing and Management 40 (2004),
+  40:919{938. [16, 17]Radev, D. R. and McKeown, K. (1998). Generating natural language summariesfrom multiple on-line sources. Computational Linguistics, 24(3):469{500. [12]Salton, G. and Buckley, C. (1988). On the use of spreading activation methods in
+  automatic information. In Proceedings of SIGIR ’88, pages 147{160, New York,NY, USA. [15]Salton, G., Wong, A., and Yang, A. C. S. (1975). A vector space model for automatic
+  indexing. Communications of the ACM, 18:229{237. [20]Selman, B., Levesque, H. J., and Mitchell, D. G. (1992). A new method for solvinghard satis▯ability problems. In AAAI, pages 440{446. [11]Svore, K., Vanderwende, L., and Burges, C. (2007). Enhancing single-document
+  summarization by combining RankNet and third-party sources. In Proceedings ofthe EMNLP-CoNLL, pages 448{457. [7, 8]Witbrock, M. J. and Mittal, V. O. (1999). Ultra-summarization (poster abstract):
+  a statistical approach to generating highly condensed non-extractive summaries.In Proceedings of SIGIR ’99, pages 315{316, New York, NY, USA. [18]
