@@ -1,20 +1,20 @@
-# Sprint 2 Génie logiciel - Scrum
-
 ### Ruby
 
-On a utilisé a Ruby pour converter PDF a Text. On l'a fait avec une fichier qu'elle s'appelle "pdf2txt.rb"
-Dans ce fischier dabord, le pdf était converté à un data du texte. En suit pour récupérer le titre, le nom de fischier et le Abstract, on a divisé ce data a une table pour chercher le nom de Abstarct. Donc on a fait des boucles pour le faire par ordre.
-A la fin, tous les informations (s'ils existent), ils vont envoyer dans une fischier texte.
-En plus le temps d'éxecution avant et apres de ce processus a calculé.
+Au cours de ce TP on a travaillé avec le langage Ruby pour convertir un fichier PDF en fichier Text,en utilisant "pdf2txt.rb"
+Premièrement le fichier PDF a été convertis à une data sous forme texte. Ensuite pour récupérer le titre, le nom et le résumé (abstract) du fichier on a divisé cette data à une table pour chercher le mots clé abstract.
+Et on a fait des boucles pour les mettre en ordre.
+à la fin, toutes les informations qui existent, ils vont etre envoyer dans un fichier texte.
+En plus le temps d'éxecution avant et apres de ce processus a été calculé.
 
 #### Le temps d'éxecution
 
-Pour chaque fishicer, la moyenne du temp d'éxecution était environ 2.5 seconds.
+Pour chaque fichier, la moyenne du temps d'éxecution était environ 2.5 seconds.
 
-#### Le probleme
+#### Le problème
 
-Le probleme existe pour les fichiers quils ont deux colonnes. Par exemple pour récupérer le Abstract, il ne peut pas bien chercher.
+On a eu des problèmes durant la convertion des articles de deux colonnes.
+Par exemple on a pas pu récupérer l'abstract car il a pas bien effectué la recherche.
 
 #### L'Avantage
 
-C'était le permier fois que tous les membres de notre groupe ont travaille avec Ruby, le Syntax est comme Python très simple et cette laguage de programmation est très rapide en operation.
+C'était la permière fois que touts les membres de notre groupe ont travaillé avec Ruby, la Syntaxe est très simple,proche de Python et ce language de programmation est très rapide en éxécution.
