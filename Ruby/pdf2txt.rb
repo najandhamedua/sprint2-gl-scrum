@@ -25,45 +25,37 @@ ARGV.each do |filename|
 
 	puts "\nWriting text to disk"
 	# Spliting the text to find the Abstract
-	m = txt.join(",").split("\n\n")
-	m.each do |i|
-		i.strip!
-	end
-
-	# Finding the Abstract if it exists its title
-	i = 0
-	abstractIndex = 0
-	introductionIndex = 0
-	while i < m.length()
-		if m[i].include?("Abstract") || m[i].include?("ABSTRACT")
-			abstractIndex = i
+	title = ""
+	paragraph = ""
+	paragraphs = []
+	reader.pages.each do |page|
+		lines = page.text.scan(/^.+/)
+		x = 0
+		# Title
+		lines.each do |line|
+			if line.length < 40
+				title += " #{line}"
+				if lines.index(line) == 0
+					break
+				end
+			end
 		end
-		i = i + 1
-	end
-
-	# Finding the next portion of the text that might be Introduction!
-	i = 0
-	while i < m.length()
-		if m[i].include?("Introduction") || m[i].include?("introduction")  || m[i].include?("INTRODUCTION")  || m[i].to_s.include?("1.") || m[i].to_s.include?("I")
-			introductionIndex = i
+		# Abstract
+		lines.each do |line|
+			if line.length > 40
+				paragraph += " #{line}"
+				paragraphs << paragraph
+				if lines.index(line) == 10 # if abstract has 10 lines
+					break
+				end
+			end
+			paragraph = ""
 		end
-		i = i + 1
-	end
-
-	# Merging the distance between the Abstract title and the Introduction title to have the portion of Abstract
-	abstract = ""
-	i = abstractIndex
-	if abstractIndex == 0
-		abstract = "There is no Abstract to select!"
-	elsif abstractIndex && introductionIndex
-		while i <= introductionIndex
-			abstract += m[i].to_s
-			i += 1
-		end
+		break
 	end
 
 	# Inserting to the Text file
-	File.write filename+'.txt', "Filename: " + filename + "\nTitle: " + m.first.to_s + "\nAbstract: " + abstract
+	File.write filename+'.xml', "<article>\n<preamble>" + filename + "</preamble>\n<titre>" + title + "</titre>\n<abstract>" + paragraphs.join("") + "</abstract>\n</article>"
 	end # reader
 
 end # each
