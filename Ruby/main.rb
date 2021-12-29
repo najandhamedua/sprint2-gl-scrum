@@ -178,15 +178,15 @@ else
 				auteur = ""
 				introduction = ""
 				corps = ""
-				conclusion = ""
-				discussion = ""
-				biblio = ""
+				discussion = search_between(reader.pages, 'Discussion', 'Conclusions')
+				conclusion = search_between(reader.pages, 'Conclusions', 'References')
+				biblio = search_to_end(reader.pages, "References")
 				
 				fileBasenmae = File.basename(arg)
 				if(convertor == "-x")
-					File.write fileBasenmae.split(".")[0]+'.xml', '<article><preamble>' + fileBasenmae + '</preamble><titre>' +  + '</titre><auteur>' +  + '</auteur><abstract>' + abstract + '</abstract><introduction>' +  + '</introduction><corps>' +  + '</corps><conclusion>' +  + '</conclusion><discussion>' +  + '</discussion><biblio>' +  + '</biblio></article>'
-				elsif(arg == "-t")
-					File.write fileBasenmae.split(".")[0]+'.txt', '<article><preamble>' + fileBasenmae + '</preamble><titre>' +  + '</titre><auteur>' +  + '</auteur><abstract>' + abstract + '</abstract><introduction>' +  + '</introduction><corps>' +  + '</corps><conclusion>' +  + '</conclusion><discussion>' +  + '</discussion><biblio>' +  + '</biblio></article>'
+					File.write fileBasenmae.split(".")[0]+'.xml', "<article>\n<preamble>" + (fileBasenmae != '' ? fileBasenmae : 'Not Detected!') + "</preamble>\n<titre>" + (titre != '' ? titre : 'Not Detected!') + "</titre>\n<auteur>" + (auteur != '' ? auteur : 'Not Detected!') + "</auteur>\n<abstract>" + (abstract != '' ? abstract : 'Not Detected!') + "</abstract>\n<introduction>" + (introduction != '' ? introduction : 'Not Detected!') + "</introduction>\n<corps>" + (corps != '' ? corps : 'Not Detected!') + "</corps>\n<conclusion>" + (conclusion != '' ? conclusion : 'Not Detected!') + "</conclusion>\n<discussion>" + (discussion != '' ? discussion : 'Not Detected!') + "</discussion>\n<biblio>" + (biblio != '' ? biblio : 'Not Detected!') + "</biblio>\n</article>"
+				elsif(convertor == "-t")
+					File.wite fileBasenmae.split(".")[0]+'.txt', "<article>\n<preamble>" + (fileBasenmae != '' ? fileBasenmae : 'Not Detected!') + "</preamble>\n<titre>" + (titre != '' ? titre : 'Not Detected!') + "</titre>\n<auteur>" + (auteur != '' ? auteur : 'Not Detected!') + "</auteur>\n<abstract>" + (abstract != '' ? abstract : 'Not Detected!') + "</abstract>\n<introduction>" + (introduction != '' ? introduction : 'Not Detected!') + "</introduction>\n<corps>" + (corps != '' ? corps : 'Not Detected!') + "</corps>\n<conclusion>" + (conclusion != '' ? conclusion : 'Not Detected!') + "</conclusion>\n<discussion>" + (discussion != '' ? discussion : 'Not Detected!') + "</discussion>\n<biblio>" + (biblio != '' ? biblio : 'Not Detected!') + "</biblio>\n</article>"
 				else
 					puts "ERROR: There is a problem to determin the first argument"
 					exit
