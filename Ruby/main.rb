@@ -166,7 +166,7 @@ else
 		if arg == "-x"
 			convertor = arg
 		elsif arg == "-t"
-			convertor = "-t"
+			convertor = arg
 		else
 			# Start converting using PDF-Reader
 			PDF::Reader.open(arg) do |reader|
