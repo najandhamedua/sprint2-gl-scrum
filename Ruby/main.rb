@@ -20,10 +20,10 @@ def getArgInfo(pages, arg)
 		
 		i = 0
 		ln = varityOfArg.length
-		
+
 		while i <= ln
 			if lines.include? varityOfArg[i]						# determining if this argument exist on this page
-				return pages.index(page), lines, varityOfArg[i]		# return page index and page lines
+				return pages.index(page), lines, varityOfArg[i]		# return page index, page lines and arguments which has been found
 			end
 			i = i + 1
 		end
